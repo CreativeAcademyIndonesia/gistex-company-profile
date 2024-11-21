@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-[#F8F9FF] text-primary-black;
+    }
+
+    .icon {
+        @apply w-4 h-4;
+    }
+
+    .chevron-down {
+        @apply inline-block;
+        mask: url('../assets/icon/chevron-down.svg') no-repeat center;
+        -webkit-mask: url('../assets/icon/chevron-down.svg') no-repeat center;
+        background-color: currentColor;
+    }
+    
+    .journey-1, .journey-2, .journey-3, .journey-4, .journey-5, .journey-6, .journey-7, .journey-8 {
+        opacity: 0;
+    }
+
+    .fade-right {
+        opacity: 0;
+        transform: translateX(100px);
+        animation: fadeFromRight 1s ease forwards;
+    }
+
+    @keyframes fadeFromRight {
+        0% {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .animate-up-down {
+        animation: upDown 4s ease-in-out infinite;
+    }
+
+    @keyframes upDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px); 
+        }
+    }
+
+}
