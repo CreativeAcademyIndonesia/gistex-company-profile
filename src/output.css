@@ -743,6 +743,10 @@ body{
   bottom: 1.5rem;
 }
 
+.bottom-\[calc\(100\%\)\]{
+  bottom: calc(100%);
+}
+
 .bottom-full{
   bottom: 100%;
 }
@@ -753,6 +757,10 @@ body{
 
 .left-0{
   left: 0px;
+}
+
+.left-1\/2{
+  left: 50%;
 }
 
 .right-0{
@@ -801,34 +809,6 @@ body{
 
 .top-full{
   top: 100%;
-}
-
-.left-1\/2{
-  left: 50%;
-}
-
-.top-1\/2{
-  top: 50%;
-}
-
-.bottom-\[calc\(100\%\+1rem\)\]{
-  bottom: calc(100% + 1rem);
-}
-
-.bottom-\[calc\(100\%-1rem\)\]{
-  bottom: calc(100% - 1rem);
-}
-
-.bottom-\[calc\(100\%-16px\)\]{
-  bottom: calc(100% - 16px);
-}
-
-.bottom-\[calc\(100\%-24px\)\]{
-  bottom: calc(100% - 24px);
-}
-
-.bottom-\[calc\(100\%\)\]{
-  bottom: calc(100%);
 }
 
 .z-10{
@@ -887,20 +867,16 @@ body{
   grid-column: span 2 / span 2;
 }
 
-.col-span-4{
-  grid-column: span 4 / span 4;
-}
-
 .col-span-3{
   grid-column: span 3 / span 3;
 }
 
-.col-start-1{
-  grid-column-start: 1;
+.col-span-4{
+  grid-column: span 4 / span 4;
 }
 
-.col-start-2{
-  grid-column-start: 2;
+.col-start-1{
+  grid-column-start: 1;
 }
 
 .row-span-2{
@@ -1242,6 +1218,11 @@ body{
   flex-shrink: 0;
 }
 
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-x-1\/2{
   --tw-translate-x: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1249,16 +1230,6 @@ body{
 
 .translate-y-14{
   --tw-translate-y: 3.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-x-1\/2{
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-y-1\/2{
-  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1300,6 +1271,10 @@ body{
 
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-3{
@@ -1405,6 +1380,12 @@ body{
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .self-center{
@@ -1769,11 +1750,6 @@ body{
   padding-bottom: 5rem;
 }
 
-.py-24{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1794,8 +1770,16 @@ body{
   padding-bottom: 2rem;
 }
 
+.pb-12{
+  padding-bottom: 3rem;
+}
+
 .pb-14{
   padding-bottom: 3.5rem;
+}
+
+.pb-5{
+  padding-bottom: 1.25rem;
 }
 
 .pb-8{
@@ -1810,6 +1794,10 @@ body{
   padding-top: 0.5rem;
 }
 
+.pt-24{
+  padding-top: 6rem;
+}
+
 .pt-4{
   padding-top: 1rem;
 }
@@ -1818,24 +1806,16 @@ body{
   padding-top: 1.25rem;
 }
 
-.pt-24{
-  padding-top: 6rem;
+.pb-3{
+  padding-bottom: 0.75rem;
 }
 
-.pb-20{
-  padding-bottom: 5rem;
+.pb-4{
+  padding-bottom: 1rem;
 }
 
-.pb-16{
-  padding-bottom: 4rem;
-}
-
-.pb-10{
-  padding-bottom: 2.5rem;
-}
-
-.pb-12{
-  padding-bottom: 3rem;
+.pb-2{
+  padding-bottom: 0.5rem;
 }
 
 .text-center{
@@ -2587,6 +2567,10 @@ body{
     bottom: 5rem;
   }
 
+  .md\:bottom-\[calc\(100\%-16px\)\]{
+    bottom: calc(100% - 16px);
+  }
+
   .md\:right-0{
     right: 0px;
   }
@@ -2609,10 +2593,6 @@ body{
 
   .md\:top-48{
     top: 12rem;
-  }
-
-  .md\:bottom-\[calc\(100\%-16px\)\]{
-    bottom: calc(100% - 16px);
   }
 
   .md\:order-1{
@@ -2829,6 +2809,11 @@ body{
     padding-bottom: 2.5rem;
   }
 
+  .md\:py-16{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .md\:py-2{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -2842,11 +2827,6 @@ body{
   .md\:py-24{
     padding-top: 6rem;
     padding-bottom: 6rem;
-  }
-
-  .md\:py-28{
-    padding-top: 7rem;
-    padding-bottom: 7rem;
   }
 
   .md\:py-3{
@@ -2864,14 +2844,8 @@ body{
     padding-bottom: 1rem;
   }
 
-  .md\:py-16{
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .md\:py-1{
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+  .md\:pb-20{
+    padding-bottom: 5rem;
   }
 
   .md\:pb-24{
@@ -2884,10 +2858,6 @@ body{
 
   .md\:pt-28{
     padding-top: 7rem;
-  }
-
-  .md\:pb-20{
-    padding-bottom: 5rem;
   }
 
   .md\:text-3xl{
